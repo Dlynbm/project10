@@ -1,4 +1,5 @@
-import {Component} from '@angular/compiler/src/core';
+import {Component, Input} from '@angular/core';
+import { Message } from "./message.model";
 
 @Component({
     selector:'app-message',
@@ -17,9 +18,7 @@ import {Component} from '@angular/compiler/src/core';
             width: 19%;
         }
     `]
-
-
 })
 export class MessageComponent {
-
+    @Input() message: Message;
 }
