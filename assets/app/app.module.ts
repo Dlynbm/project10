@@ -29,7 +29,13 @@ import {AuthService} from './auth/auth.service';
         SignupComponent,
         SigninComponent
     ],
-    imports: [BrowserModule, FormsModule, routing, ReactiveFormsModule, HttpModule],
+    imports: [
+        BrowserModule,
+        FormsModule,
+        routing,
+        ReactiveFormsModule,
+        HttpModule
+    ],
     providers: [AuthService],
     bootstrap: [AppComponent]
 })

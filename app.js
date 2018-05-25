@@ -8,7 +8,7 @@ const mongoose = require('mongoose');
 
 const appRoutes = require('./routes/app');
 const MessageRoutes = require('./routes/messages');
-const userRoutes = require('./routes/users');
+const userRoutes = require('./routes/user');
 
 
 const app = express();

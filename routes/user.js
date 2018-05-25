@@ -6,7 +6,7 @@ const jwt = require('jsonwebtoken');
 const User = require('../models/user');
 
 router.post('/', function (req, res, next) {
-    var user = new User({
+    const user = new User({
         firstName: req.body.firstName,
         lastName: req.body.lastName,
         password: bcrypt.hashSync(req.body.password, 10),
@@ -15,14 +15,14 @@ router.post('/', function (req, res, next) {
     user.save(function(err, result) {
         if(err) {
             return res.status(500).json({
-                title: 'An error occured',
+                title: 'An error occurred',
                 error:err
             });
         }
         res.status(201).json({
             message: 'User created',
             obj:result
-        })
+        });
     });
 });
 
